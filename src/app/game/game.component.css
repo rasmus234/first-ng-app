@@ -1,0 +1,23 @@
+.game-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+.score{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.current-number{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+button {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  padding: 2rem 3rem;
+}

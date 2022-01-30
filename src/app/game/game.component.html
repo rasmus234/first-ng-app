@@ -1,0 +1,10 @@
+<div class="game-root">
+  <span class="score">Score: {{score}}</span>
+  <span class="current-number" style="margin: 15px">Current number: {{currentNumber}}</span>
+  <div>
+    <button (click)="guess('higher')" mat-raised-button color="primary">Higher</button>
+    <button (click)="guess('lower')" mat-raised-button color="warn">Lower</button>
+  </div>
+
+</div>
+
