@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatTable} from "@angular/material/table";
+import {ProductServiceService} from "../product-service.service";
 
 @Component({
   selector: 'app-product-list',
@@ -8,23 +9,17 @@ import {MatTable} from "@angular/material/table";
 })
 export class ProductListComponent implements OnInit {
 
-  displayedColumns = ["id","name","price"]
-  products: Product[] = [
-    {id: 1, name: "Product 1", price: 100},
-    {id: 2, name: "Product 2", price: 200},
-    {id: 3, name: "Product 3", price: 300},
-  ]
+  displayedColumns = ["id","name","price","removeItem"]
 
   @ViewChild
-  (MatTable) table: MatTable<Product> | undefined;
+  (MatTable) table?: MatTable<Product>;
 
   addProduct(){
-    this.products.push({id: 4, name: "Product 4", price: 400})
-    console.log(this.products)
+    this.productService.addProduct({id: 4, name: "Product 4", price: 400})
     this.table?.renderRows()
   }
 
-  constructor() { }
+  constructor(public productService:ProductServiceService) { }
 
   ngOnInit(): void {
   }

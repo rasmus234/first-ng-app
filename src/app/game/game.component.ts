@@ -14,6 +14,7 @@ export class GameComponent implements OnInit {
 
   currentNumber: number = 0
   nextNumber: number = 0
+  user: string = ''
 
   getRandomNumber(): number {
     return Math.floor(Math.random() * 100) + 1

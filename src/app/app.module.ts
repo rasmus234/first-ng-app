@@ -15,6 +15,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { AdminComponent } from './admin/admin.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatTableModule} from "@angular/material/table";
+import {FormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import {MatTableModule} from "@angular/material/table";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
@@ -34,7 +37,8 @@ import {MatTableModule} from "@angular/material/table";
     MatButtonModule,
     LayoutModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
